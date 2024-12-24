@@ -42,7 +42,7 @@ book_type.append("ACADEMIC")
 print("Book Type:",Book.get_book_type())
 
 # TODO: Create some book instances
-b1=Book("The Bhagvat Gita","HOLLY")
+b1=Book("The Gita","HOLLY")
 b2=Book("The Magic of Big Thinking","MOTIVATIONAL")
 
 print(b1)
