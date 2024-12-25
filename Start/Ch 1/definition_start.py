@@ -5,17 +5,17 @@
 # TODO: create a basic class
 class Book:
   Book_Type=["COMIC","HOLLY"]
-  def __init__(self,title,author):
+  def __init__(self,title,price):
     self.title=title
-    self.author=author
+    self.price=price
 
   #instance method
-  def get_book_title(self):
-    return self.title
+  def change_title(self,title):
+    self.title=title
 
 
 # TODO: create instances of the class
-b1=Book("The magic of big thinking","None")
+b1=Book("The magic of big thinking",25)
 
 
 # TODO: print the class and property

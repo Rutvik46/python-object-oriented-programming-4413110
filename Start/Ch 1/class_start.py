@@ -1,7 +1,6 @@
 # Python Object Oriented Programming by Joe Marini course example
 # Using class-level and static methods
 
-
 class Book:
     # TODO: Properties defined at the class level are shared by all instances
     BOOK_TYPE=["MOTIVATIONAL","COMIC","HOLLY"]
@@ -14,14 +13,12 @@ class Book:
     def get_book_type(cls):
         return cls.BOOK_TYPE
 
-
     # TODO: create a static method
     @staticmethod
     def get_book_list():
         if Book.__BOOKLIST==None:
             Book.__BOOKLIST=[]
         return Book.__BOOKLIST
-
 
     # instance methods receive a specific object instance as an argument
     # and operate on data specific to that object instance
@@ -51,11 +48,6 @@ print(b1.booktype)
 print(b1.BOOK_TYPE)
 #print("Book List:", b1.__BOOKLIST)
 print("Book List:", b1._Book__BOOKLIST)
-
-# print(b2)
-# print(b2.title)
-# print(type(b1)==type(b2))
-# print(isinstance(b1,Book))
 
 # TODO: Use the static method to access a singleton object
 book_list=Book.get_book_list()

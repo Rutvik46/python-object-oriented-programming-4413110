@@ -3,23 +3,41 @@
 
 
 class Book:
-    def __init__(self, title, price, authorfname, authorlname):
+    def __init__(self, title, price, author):
         self.title = title
         self.price = price
 
-        self.authorfname = authorfname
-        self.authorlname = authorlname
+        self.author= author
 
         self.chapters = []
 
-    def addchapter(self, name, pages):
-        self.chapters.append((name, pages))
+    def addchapter(self,chapter):
+        self.chapters.append(chapter)
+
+    def pagecount(self):
+        count=0
+        for ch in self.chapters:
+            count+= ch.pages
+        return count
 
 
-b1 = Book("War and Peace", 39.0, "Leo", "Tolstoy")
+class author:
+    def __init__(self,fname,lname):
+        self.fname=fname
+        self.lname=lname
 
-b1.addchapter("Chapter 1", 125)
-b1.addchapter("Chapter 2", 97)
-b1.addchapter("Chapter 3", 143)
+class chapter:
+    def __init__(self,chaptername,pages):
+        self.chaptername=chaptername
+        self.pages=pages
+    
+        
+b1 = Book("War and Peace", 39.0, author("Leo", "Tolstoy"))
+b1.addchapter(chapter("Chapter 1", 125))
+b1.addchapter(chapter("Chapter 2", 97))
+b1.addchapter(chapter("Chapter 3", 143))
 
 print(b1.title)
+print(b1.author.__dict__)
+print(b1.author.fname)
+print(b1.pagecount())
